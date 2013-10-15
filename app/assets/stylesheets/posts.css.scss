@@ -1,3 +1,11 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 $primary-color: #ff5100;
 @import url(http://fonts.googleapis.com/css?family=Fenix);
 
@@ -18,6 +26,9 @@ article {
 		font-style: italic;
 	}
 	time {
+	  padding: 4px;
+	  border: 2px solid darken($primary-color, 10%);
+	  @include border-radius(5px);
 	  font: {
 		weight: bold;
 		family: Fenix, sans-serif;
@@ -28,3 +39,22 @@ article {
 	  p { line-height: 1.5em; }
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
