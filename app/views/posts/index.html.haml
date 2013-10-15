@@ -1,9 +1,19 @@
 %h1 My blog
+%nav.top-bar
+  %ul.title-area
+  %ul.right
+    %li
+      %a
+        = link_to 'Title', posts_path
+    %li
+      %a
+        = link_to 'Post', new_post_path
 
-= link_to 'New Post', new_post_path
+
+.button= link_to 'New Post', new_post_path
 
 - @posts.each do |post|
   .post-preview
     %h2= link_to(post.title, post)
 
-    %p= post.body.truncate(75)
+    %p= post.body.truncate(50)
